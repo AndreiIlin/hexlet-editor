@@ -4,7 +4,8 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
@@ -78,7 +79,7 @@ module.exports = {
     ],
   },
   optimization: {
-    minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin({})],
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin({})],
   },
   plugins: [
     new MonacoWebpackPlugin(),
