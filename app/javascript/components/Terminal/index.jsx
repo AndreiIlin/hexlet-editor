@@ -11,7 +11,6 @@ const runTerminal = (xterm, output) => {
   term.write(`\r\n${shellprompt}${output}`);
 };
 
-// const DEFAULT_TERMINAL_ADDONS = ['fit'];
 
 export const Terminal = () => {
   const xTermRef = useRef(null);
