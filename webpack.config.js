@@ -4,7 +4,7 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
@@ -66,9 +66,9 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-				test: /\.ttf$/,
-				type: 'asset/resource'
-			},
+        test: /\.ttf$/,
+        type: 'asset/resource',
+      },
       {
         test: /\.(jpg|png|jpeg)$/,
         use: {
